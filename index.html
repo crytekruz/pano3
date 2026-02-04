@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>360 Viewer</title>
+    <style>
+        body {
+            margin: 0; padding: 0; background-color: #f0f0f0;
+            display: flex; justify-content: center; align-items: center;
+            height: 100vh; font-family: sans-serif;
+        }
+        #viewer-container {
+            position: relative; width: 100%; max-width: 1920px;
+            aspect-ratio: 16 / 9; cursor: grab; user-select: none;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2); background: #ddd;
+        }
+        #viewer-container:active { cursor: grabbing; }
+        #product-image { width: 100%; height: 100%; object-fit: contain; pointer-events: none; }
+        #loader {
+            position: absolute; top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px; background: rgba(255,255,255,0.9);
+            border-radius: 8px; text-align: center;
+            z-index: 10;
+        }
+        .error-msg { color: red; font-weight: bold; margin-top: 10px; display: block;}
+    </style>
+</head>
+<body>
+
+    <div id="viewer-container">
+        <div id="loader">Начинаю поиск файлов...</div>
+        <img id="product-image" src="" alt="360 view">
+    </div>
+
+    <script>
+        // ================= НАСТРОЙКИ (МЕНЯТЬ ЗДЕСЬ) =================
+        
+        const folderPath = 'Sequence1_004';   // Папка с картинками
+        const fileExtension = 'png';   // jpg или png
+        const totalFrames = 36;        // Сколько всего файлов
+        
+        // Настройка имен файлов: Sequence1_Orbit02_000.jpg
+        const fileNamePrefix = 'Sequence1_004_'; // То, что ДО цифр
+        const digitsCount = 2;         // Сколько цифр в номере (3, если 000, 001...)
+        const startNumber = 0;         // С какой цифры начинается первый файл (обычно 0 или 1)
+        const sensitivity = 15;        // Чувствительность мыши
+        
+        // ============================================================
+
+        const imgElement = document.getElementById('product-image');
+        const container = document.getElementById('viewer-container');
+        const loader = document.getElementById('loader');
+
+        let loadedCount = 0;
+        const images = [];
+        let hasError = false;
+
+        function preloadImages() {
+            for (let i = 0; i < totalFrames; i++) {
+                const img = new Image();
+                
+                // === Логика создания имени файла ===
+                // Вычисляем текущий номер файла: (0 + 0) или (1 + 0) и т.д.
+                let currentFileNum = startNumber + i; 
+                
+                // Добавляем нули в начало (например, превращаем 5 в "005")
+                let formattedNum = currentFileNum.toString().padStart(digitsCount, '0');
+                
+                // Собираем полный путь
+                const path = `${folderPath}/${fileNamePrefix}${formattedNum}.${fileExtension}`;
+                // ===================================
+
+                img.src = path;
+                
+                img.onload = () => {
+                    if(hasError) return;
+                    loadedCount++;
+                    loader.innerText = `Загружено: ${Math.round((loadedCount / totalFrames) * 100)}%`;
+                    if (loadedCount === totalFrames) {
+                        loader.style.display = 'none';
+                        initViewer();
+                    }
+                };
+
+                img.onerror = () => {
+                    if (!hasError) { // Показываем ошибку только 1 раз
+                        hasError = true;
+                        loader.innerHTML = `
+                            <span class="error-msg">ОШИБКА!</span>
+                            <br>Не могу найти файл: <br><b>${path}</b>
+                            <br><br>
+                            Проверьте настройки в коде:<br>
+                            1. Префикс: "${fileNamePrefix}"<br>
+                            2. Количество нулей: ${digitsCount}<br>
+                            3. Стартовый номер: ${startNumber}
+                        `;
+                    }
+                };
+
+                images.push(img);
+            }
+        }
+
+        let currentFrameIndex = 0; // Теперь используем индекс массива (0..N)
+        let startX = 0;
+        let isDragging = false;
+
+        function updateImage(index) {
+            // Зацикливание
+            if (index < 0) index = totalFrames - 1;
+            if (index >= totalFrames) index = 0;
+            
+            currentFrameIndex = index;
+            imgElement.src = images[currentFrameIndex].src;
+        }
+
+        function initViewer() {
+            updateImage(0); // Показываем первый кадр
+
+            const startDrag = (x) => { isDragging = true; startX = x; };
+            const endDrag = () => { isDragging = false; };
+            
+            const moveDrag = (x) => {
+                if (!isDragging) return;
+                const deltaX = x - startX;
+                if (Math.abs(deltaX) > sensitivity) {
+                    const direction = deltaX > 0 ? 1 : -1;
+                    // Если тянем вправо, уменьшаем индекс (чтобы вращалось естественно)
+                    // Можно поменять + и - местами, если крутится не туда
+                    updateImage(currentFrameIndex - direction);
+                    startX = x;
+                }
+            };
+
+            container.addEventListener('mousedown', (e) => startDrag(e.clientX));
+            window.addEventListener('mousemove', (e) => moveDrag(e.clientX));
+            window.addEventListener('mouseup', endDrag);
+            
+            container.addEventListener('touchstart', (e) => startDrag(e.touches[0].clientX));
+            window.addEventListener('touchmove', (e) => moveDrag(e.touches[0].clientX));
+            window.addEventListener('touchend', endDrag);
+        }
+
+        preloadImages();
+    </script>
+</body>
+</html>
