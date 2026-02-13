@@ -1,0 +1,68 @@
+{
+  "markers": [
+    {
+      "id": "1770891779328",
+      "theta": -2.80535395138123,
+      "phi": 1.8346696126967261,
+      "text": "Детский сад на 55 чел.",
+      "fontSize": 12,
+      "fontFamily": "Arial, sans-serif",
+      "fontWeight": "normal",
+      "fontStyle": "normal",
+      "url": "",
+      "date": "2026-02-12T10:22:59.328Z"
+    },
+    {
+      "id": "1770891800389",
+      "theta": 2.8417750272182123,
+      "phi": 1.7257614784474757,
+      "text": "Спортивная площадка",
+      "fontSize": 12,
+      "fontFamily": "Arial, sans-serif",
+      "fontWeight": "normal",
+      "fontStyle": "normal",
+      "url": "",
+      "date": "2026-02-12T10:23:20.389Z"
+    },
+    {
+      "id": "1770891825573",
+      "theta": -0.6785300109926268,
+      "phi": 1.621651983650045,
+      "text": "Пляж",
+      "fontSize": 14,
+      "fontFamily": "Arial, sans-serif",
+      "fontWeight": "bold",
+      "fontStyle": "normal",
+      "url": "https://crytekruz.github.io/pano4",
+      "date": "2026-02-12T10:23:45.573Z"
+    },
+    {
+      "id": "1770891874357",
+      "theta": 1.379799119232637,
+      "phi": 1.5809870809319502,
+      "text": "Общественно-деловой центр",
+      "fontSize": 14,
+      "fontFamily": "Arial, sans-serif",
+      "fontWeight": "bold",
+      "fontStyle": "normal",
+      "url": "https://crytekruz.github.io/pano2",
+      "date": "2026-02-12T10:24:34.358Z"
+    },
+    {
+      "id": "1770891888330",
+      "theta": 0.7117612208947417,
+      "phi": 1.5788716957507452,
+      "text": "Лесопарк",
+      "fontSize": 14,
+      "fontFamily": "Arial, sans-serif",
+      "fontWeight": "bold",
+      "fontStyle": "normal",
+      "url": "https://crytekruz.github.io/pano5",
+      "date": "2026-02-12T10:24:48.330Z"
+    }
+  ],
+  "view": {
+    "x": 0.7279522622682887,
+    "y": 6.885703329419392
+  }
+}
