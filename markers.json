@@ -1,18 +1,6 @@
 {
   "markers": [
     {
-      "id": "1770891779328",
-      "theta": -2.80535395138123,
-      "phi": 1.8346696126967261,
-      "text": "Детский сад\n55 мест",
-      "fontSize": 12,
-      "fontFamily": "Arial, sans-serif",
-      "fontWeight": "normal",
-      "fontStyle": "normal",
-      "url": "",
-      "date": "2026-02-12T10:22:59.328Z"
-    },
-    {
       "id": "1770891800389",
       "theta": 2.8417750272182123,
       "phi": 1.7257614784474757,
@@ -22,7 +10,8 @@
       "fontWeight": "normal",
       "fontStyle": "normal",
       "url": "",
-      "date": "2026-02-12T10:23:20.389Z"
+      "color": "#ffffff",
+      "date": "2026-02-25T09:52:09.240Z"
     },
     {
       "id": "1770891825573",
@@ -35,7 +24,7 @@
       "fontStyle": "normal",
       "url": "https://crytekruz.github.io/pano4",
       "color": "#ffda99",
-      "date": "2026-02-12T10:23:45.573Z"
+      "date": "2026-02-25T09:52:09.240Z"
     },
     {
       "id": "1770891874357",
@@ -48,7 +37,7 @@
       "fontStyle": "normal",
       "url": "https://crytekruz.github.io/pano2",
       "color": "#ffda99",
-      "date": "2026-02-12T10:24:34.358Z"
+      "date": "2026-02-25T09:52:09.240Z"
     },
     {
       "id": "1770891888330",
@@ -61,7 +50,150 @@
       "fontStyle": "normal",
       "url": "https://crytekruz.github.io/pano5",
       "color": "#ffda99",
-      "date": "2026-02-12T10:24:48.330Z"
+      "date": "2026-02-25T09:52:09.240Z"
+    },
+    {
+      "id": "1772013172754",
+      "theta": -3.0481074612344283,
+      "phi": 1.7758114068630515,
+      "text": "Детский сад\n55 мест",
+      "fontSize": 12,
+      "fontFamily": "Arial, sans-serif",
+      "fontWeight": "normal",
+      "fontStyle": "normal",
+      "url": "",
+      "color": "#ffffff",
+      "date": "2026-02-25T09:52:52.754Z"
+    },
+    {
+      "id": "1772013196803",
+      "theta": 2.0336794484449516,
+      "phi": 1.7358792756082235,
+      "text": "МКД",
+      "fontSize": 12,
+      "fontFamily": "Arial, sans-serif",
+      "fontWeight": "normal",
+      "fontStyle": "normal",
+      "url": "",
+      "color": "#ffda99",
+      "date": "2026-02-25T09:53:16.803Z"
+    },
+    {
+      "id": "1772013212087",
+      "theta": 1.8300958710163067,
+      "phi": 1.6643843865798618,
+      "text": "Мед. центр\nи пункт полиции",
+      "fontSize": 12,
+      "fontFamily": "Arial, sans-serif",
+      "fontWeight": "normal",
+      "fontStyle": "normal",
+      "url": "",
+      "color": "#ffffff",
+      "date": "2026-02-25T09:53:32.087Z"
+    },
+    {
+      "id": "1772013228099",
+      "theta": 1.6132462419712041,
+      "phi": 1.6285701144572557,
+      "text": "Торгово-офисные\nздания",
+      "fontSize": 12,
+      "fontFamily": "Arial, sans-serif",
+      "fontWeight": "normal",
+      "fontStyle": "normal",
+      "url": "",
+      "color": "#ffffff",
+      "date": "2026-02-25T09:53:48.099Z"
+    },
+    {
+      "id": "1772013242623",
+      "theta": -2.5857891502381314,
+      "phi": 1.9791372015603326,
+      "text": "Детская\nплощадка",
+      "fontSize": 12,
+      "fontFamily": "Arial, sans-serif",
+      "fontWeight": "normal",
+      "fontStyle": "normal",
+      "url": "",
+      "color": "#ffffff",
+      "date": "2026-02-25T09:54:02.624Z"
+    },
+    {
+      "id": "1772013272109",
+      "theta": -1.178658996946191,
+      "phi": 1.7458270253622188,
+      "text": "Ресторан\n\"У водохранилища\"",
+      "fontSize": 12,
+      "fontFamily": "Arial, sans-serif",
+      "fontWeight": "normal",
+      "fontStyle": "normal",
+      "url": "",
+      "color": "#ffffff",
+      "date": "2026-02-25T09:54:32.109Z"
+    },
+    {
+      "id": "1772013293841",
+      "theta": 2.474131275177505,
+      "phi": 1.6968245018436652,
+      "text": "Инженерная\nинфраструктура",
+      "fontSize": 12,
+      "fontFamily": "Arial, sans-serif",
+      "fontWeight": "normal",
+      "fontStyle": "normal",
+      "url": "",
+      "color": "#ffffff",
+      "date": "2026-02-25T09:54:53.841Z"
+    },
+    {
+      "id": "1772013314144",
+      "theta": 1.9397279933209943,
+      "phi": 2.04955503517143,
+      "text": "Эспланада",
+      "fontSize": 12,
+      "fontFamily": "Arial, sans-serif",
+      "fontWeight": "normal",
+      "fontStyle": "normal",
+      "url": "",
+      "color": "#ffffff",
+      "date": "2026-02-25T09:55:14.145Z"
+    },
+    {
+      "id": "1772013327898",
+      "theta": 1.2173024065036944,
+      "phi": 1.757562434933461,
+      "text": "\"Сад-делянка\"",
+      "fontSize": 12,
+      "fontFamily": "Arial, sans-serif",
+      "fontWeight": "normal",
+      "fontStyle": "normal",
+      "url": "",
+      "color": "#ffffff",
+      "date": "2026-02-25T09:55:27.898Z"
+    },
+    {
+      "id": "1772013346836",
+      "theta": 0.4760859848478498,
+      "phi": 1.9190321586586518,
+      "text": "ИЖС",
+      "fontSize": 12,
+      "fontFamily": "Arial, sans-serif",
+      "fontWeight": "normal",
+      "fontStyle": "normal",
+      "url": "",
+      "color": "#ffda99",
+      "date": "2026-02-25T09:55:46.836Z"
+    },
+    {
+      "id": "1772013379881",
+      "theta": 1.1035757687589698,
+      "phi": 1.8846492632599454,
+      "text": "Детская\nплощадка",
+      "fontSize": 12,
+      "fontFamily": "Arial, sans-serif",
+      "fontWeight": "normal",
+      "fontStyle": "normal",
+      "url": "",
+      "color": "#ffffff",
+      "date": "2026-02-25T09:56:19.881Z"
     }
   ],
   "view": {
